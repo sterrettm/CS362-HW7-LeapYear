@@ -23,5 +23,15 @@ class LeapYearTestCase(unittest.TestCase):
         self.assertEqual(False, leapyear(1100))
         self.assertEqual(False, leapyear(2700))
 
+    def testEveryFourHundred(self):
+
+        # Test that years that are multiples of 400 are
+        # marked as leap years
+
+        self.assertEqual(True, leapyear(2000))
+        self.assertEqual(True, leapyear(2400))
+        self.assertEqual(True, leapyear(1600))
+        self.assertEqual(True, leapyear(800))
+
 if __name__ == "__main__":
     unittest.main()
